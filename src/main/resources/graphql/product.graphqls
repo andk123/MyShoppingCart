@@ -1,0 +1,15 @@
+type Product {
+	id: ID!
+	title: String!
+	price: Int!
+	inventory_count: Int!
+}
+
+type Query {
+	fetchAllProducts(emptyProducts: Boolean) : [Product]!
+	fetchProduct(id: ID!) : Product!
+}
+
+type Mutation {
+ 	purchaseProduct(id: ID!, numberPurchase: Int!) : Product!
+}
